@@ -2,28 +2,69 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Noticia: Cotización del Dólar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticia Económica - Clase 03</title>
 </head>
 <body>
 
-    <h1>En una semana caliente, el dólar cotiza cerca de los $1.420</h1>
+    <nav>
+        <p><strong>Menú:</strong> 
+            <a href="index.html">Inicio</a> | 
+            <a href="https://www.perfil.com/seccion/economia" target="_blank">Ver noticia original</a>
+        </p>
+    </nav>
 
-    <h2>La divisa paralela subió con fuerza en los últimos días y la brecha cambiaria se amplió.</h2>
+    <main>
+        <article>
+            <header>
+                <h1>En una semana caliente, el dólar cotiza cerca de los $1.420</h1>
+                <p>Publicado por: <span>Redacción Economía</span></p>
+            </header>
 
-    <p>El mercado sigue con atención los movimientos del <strong>Banco Central</strong> en medio de una persistente demanda de dólares y una oferta que no termina de aparecer en el mercado oficial.</p>
+            <section id="cuerpo-noticia">
+                <p>La divisa paralela subió con fuerza en los últimos días y la <strong>brecha cambiaria</strong> se amplió significativamente.</p>
+                
+                <p>El mercado sigue con atención los movimientos del Banco Central en una semana donde el valor alcanzó los <span>$1.420</span>.</p>
+            </section>
+        </article>
 
-    <h3>Factores que influyen en la subida</h3>
-    <p>
-        Diversos analistas coinciden en que la incertidumbre sobre la acumulación de reservas y los pagos de deuda previstos para los próximos meses están presionando sobre las cotizaciones financieras. 
-        En este contexto, el <strong>dólar blue</strong> ha mostrado una volatilidad creciente.
-    </p>
+        <hr>
 
-    <p>
-        Además, la brecha cambiaria se mantiene en niveles que preocupan al sector exportador, mientras el gobierno intenta dar señales de calma a través de anuncios fiscales.
-    </p>
+        <section id="suscripcion">
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Newsletter de Economía</legend>
+                    
+                    <h3>¡Suscríbete para recibir alertas!</h3>
+                    <p>Completa tus datos para estar al tanto de la cotización del dólar.</p>
 
-    <hr>
-    <p><small>Fuente: Perfil.com - Sección Economía</small></p>
+                    <div>
+                        <label for="nombre">Nombre y Apellido:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="interes">Me interesa recibir información:</label>
+                        <select id="interes" name="interes">
+                            <option value="diaria">Diariamente</option>
+                            <option value="semanal">Semanalmente</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button type="submit">Enviar suscripción</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desarrollo Web UAI - Estudiante: Fernando Almansa</p>
+    </footer>
 
 </body>
 </html>
