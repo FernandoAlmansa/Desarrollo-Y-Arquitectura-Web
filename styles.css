@@ -1,0 +1,93 @@
+/* 1. Selector Universal: Reseteo básico para que se vea igual en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Selector de Etiqueta: Tipografía base */
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 3. Selector de ID: El contenedor principal */
+#main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* 4. Selectores de Clase: Colores de Olé */
+.header-top {
+    background-color: #94BE1F; /* Verde Olé */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.article-header {
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* 5. Selector Descendente: Título dentro del encabezado de la noticia */
+.article-header h1 {
+    font-size: 2.5rem;
+    color: #242F37; /* Azul oscuro Olé */
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+/* Selector para el autor y fecha */
+.meta-info {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.meta-info strong {
+    color: #94BE1F;
+}
+
+/* Estilo para la imagen/video */
+.multimedia-box {
+    margin: 20px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.multimedia-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Cuerpo de la noticia */
+.content-body p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* 6. Selector de clase para temas relacionados (tags) */
+.tag-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.tag {
+    background-color: #AFE22117;
+    border: 1px solid #94BE1F;
+    color: #94BE1F;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
