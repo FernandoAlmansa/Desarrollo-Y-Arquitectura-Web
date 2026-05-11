@@ -1,93 +1,111 @@
-/* 1. Selector Universal: Reseteo básico para que se vea igual en todos los navegadores */
+/* =========================================
+   1. RESET & CONFIGURACIÓN BASE (BOX MODEL)
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Crucial: incluye padding y border en el ancho total */
 }
 
-/* 2. Selector de Etiqueta: Tipografía base */
 body {
-    font-family: 'Helvetica', Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
     color: #333;
+    background-color: #f4f4f4;
 }
 
-/* 3. Selector de ID: El contenedor principal */
-#main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
+/* Contenedor principal con ancho máximo para Desktop */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;       /* Centra el contenido horizontalmente */
+    padding: 0 20px;      /* Espacio interno para que el texto no toque los bordes */
 }
 
-/* 4. Selectores de Clase: Colores de Olé */
-.header-top {
-    background-color: #94BE1F; /* Verde Olé */
+/* =========================================
+   2. ESTILOS GENERALES (DESKTOP)
+   ========================================= */
+.main-header {
+    background-color: #ff0000;
     color: white;
-    padding: 10px 0;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
+    padding: 15px 0;      /* Control de altura mediante padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.article-header {
-    border-bottom: 2px solid #eee;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+.news-article {
+    background-color: white;
+    margin-top: 30px;     /* Margen superior para separar del header */
+    padding: 50px;        /* Espacio interno generoso en Desktop */
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Borde sutil */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* 5. Selector Descendente: Título dentro del encabezado de la noticia */
-.article-header h1 {
-    font-size: 2.5rem;
-    color: #242F37; /* Azul oscuro Olé */
+h1 {
+    font-size: 42px;
     line-height: 1.1;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    color: #000;
 }
 
-/* Selector para el autor y fecha */
-.meta-info {
-    font-size: 0.9rem;
-    color: #666;
+.main-image {
+    margin: 30px -50px;   /* Margen negativo para expandir la imagen en desktop */
 }
 
-.meta-info strong {
-    color: #94BE1F;
-}
-
-/* Estilo para la imagen/video */
-.multimedia-box {
-    margin: 20px 0;
-    background-color: #000;
-    text-align: center;
-}
-
-.multimedia-box img {
-    max-width: 100%;
+.main-image img {
+    width: 100%;          /* La imagen ocupa todo el ancho disponible */
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
-/* Cuerpo de la noticia */
-.content-body p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+.highlight-box {
+    border-left: 5px solid #ff0000; /* Uso de borde para énfasis visual */
+    padding: 25px;
+    margin: 40px 0;
+    background-color: #fff8f8;
+    font-style: italic;
 }
 
-/* 6. Selector de clase para temas relacionados (tags) */
-.tag-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 30px;
+/* =========================================
+   3. MEDIA QUERIES (ADAPTABILIDAD)
+   ========================================= */
+
+/* TABLET (Dispositivos medianos) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;   /* El contenedor ocupa más porcentaje de pantalla */
+    }
+
+    .news-article {
+        padding: 35px;    /* Reducimos el padding interno */
+    }
+
+    h1 {
+        font-size: 34px;  /* Ajuste de tipografía */
+    }
 }
 
-.tag {
-    background-color: #AFE22117;
-    border: 1px solid #94BE1F;
-    color: #94BE1F;
-    padding: 5px 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.8rem;
+/* MOBILE (Dispositivos pequeños) */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 0;
+    }
+
+    .news-article {
+        margin-top: 0;    /* Quitamos márgenes externos para ganar espacio */
+        padding: 20px;    /* Padding mínimo para móviles */
+        border: none;     /* Quitamos bordes para un look más limpio */
+    }
+
+    h1 {
+        font-size: 28px;  /* Título más pequeño para pantallas estrechas */
+    }
+
+    .main-image {
+        margin: 20px -20px; /* Ajuste del margen negativo según el padding del article */
+    }
+
+    .article-body p {
+        font-size: 16px;  /* Texto más compacto */
+    }
 }
